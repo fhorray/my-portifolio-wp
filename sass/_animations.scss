@@ -1,0 +1,98 @@
+// Interm animation
+@keyframes intermAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Arrows Down
+@keyframes downOpacity {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+// Skills Animation
+@keyframes baladOne {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes baladTwo {
+  0% {
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+// Balad Animation
+@mixin baladAnimation {
+  .baladAnimation {
+    transition: all 0.3s ease-in;
+    &:hover {
+      animation: baladOne 0.6s infinite ease-in-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: backwards;
+      animation-direction: alternate, reverse, normal;
+
+      transform: scale(1.03);
+      transform: translateY(-0.2rem);
+    }
+  }
+}

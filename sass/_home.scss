@@ -1,0 +1,645 @@
+.s-hero {
+  padding-top: 10.7rem;
+  color: $brand-color-light;
+  position: relative;
+  margin-bottom: 7rem;
+
+  .container {
+    @include flex(row, space-between, center);
+    gap: 7rem;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 57.8rem;
+    z-index: 10;
+
+    h2 {
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-light;
+      margin-bottom: 1.8rem;
+      span {
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $brand-color-purple;
+      }
+      .interm {
+        font-weight: 300;
+        font-size: 5.8rem;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        position: relative;
+        top: 0.8rem;
+        color: $brand-color-light;
+        animation: intermAnimation 0.9s infinite ease-in-out;
+      }
+    }
+    h1,
+    p,
+    ul {
+      padding-left: 5.3rem;
+      margin-bottom: 1.8rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 6rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $brand-color-purple;
+    }
+
+    ul {
+      @include flex(row, start, center);
+      gap: 3.5rem;
+    }
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 40rem;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  .dt1 {
+    top: 6.8rem;
+    opacity: 0.15;
+  }
+  .dt2 {
+    top: 30.8rem;
+    z-index: 3;
+    opacity: 0.1;
+  }
+  .dt3 {
+    bottom: -14.6rem;
+    opacity: 0.05;
+  }
+
+  &::before,
+  &::after {
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    right: 42px;
+    z-index: 3000;
+    animation: baladTwo 0.2s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  &::after {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 27rem;
+    z-index: 3000;
+    animation: baladTwo 3s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  @include responsive(970px) {
+    .text {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  @include responsive(900px) {
+    .text {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+  }
+  @include responsive(865px) {
+    margin-bottom: 0;
+    .container {
+      flex-direction: column;
+      gap: 0;
+    }
+    .text {
+      h1 {
+        font-size: 6rem;
+      }
+
+      h2 {
+        .interm {
+          font-size: 4.8rem;
+        }
+      }
+    }
+
+    .hero-img {
+      position: relative;
+      top: -7rem;
+    }
+  }
+  @include responsive(500px) {
+    .text {
+      h1 {
+        font-size: 5.6rem;
+        padding-left: 1.3rem;
+      }
+      p {
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  @include responsive(430px) {
+    .text {
+      h1 {
+        font-size: 5.3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+      h2 {
+        .interm {
+          font-size: 4rem;
+          top: 0.5rem;
+        }
+      }
+    }
+
+    .hero-img {
+      max-width: 34rem;
+      top: -4rem;
+      margin-bottom: 1rem;
+    }
+
+    .dt1 {
+      font-size: 5.5rem;
+      top: 7rem;
+      opacity: 0.1;
+    }
+    .dt2 {
+      font-size: 5.5rem;
+      top: 20rem;
+      opacity: 0.1;
+      right: 0;
+    }
+    .dt3 {
+      font-size: 5.5rem;
+      top: 35rem;
+      opacity: 0.1;
+      right: 0;
+    }
+  }
+}
+
+.s-skills {
+  .container {
+    @include flex(column, center, center);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light;
+    margin-bottom: 5rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  ul {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+
+    gap: 5.5rem;
+    margin-bottom: 4rem;
+    li {
+      cursor: pointer;
+      @include baladAnimation;
+    }
+  }
+
+  .arrow-down {
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    img:nth-child(1) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(2) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.6s;
+      animation-fill-mode: backwards;
+    }
+    img:nth-child(3) {
+      animation: downOpacity 2s infinite ease-in-out;
+      animation-delay: 0.9s;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+.s-about {
+  color: $brand-color-light;
+  padding-top: 6rem;
+
+  .container {
+    position: relative;
+  }
+  .text {
+    p {
+      width: 100%;
+      max-width: 58.8rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+      padding-left: 5.3rem;
+    }
+  }
+
+  a {
+    color: $brand-color-purple-light;
+    font-size: 2rem;
+  }
+
+  .dt-sobre {
+    position: absolute;
+    bottom: 10rem;
+    right: -2rem;
+    opacity: 0.15;
+  }
+
+  @include sectionBefore;
+
+  @include responsive(700px) {
+    .text {
+      width: 90%;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    .dt-sobre {
+      top: -8rem;
+    }
+  }
+  @include responsive(500px) {
+    .text {
+      p {
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .text {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  @include responsive(700px) {
+    .text {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+    .dt-sobre {
+      top: -13rem;
+      font-size: 14rem;
+      left: 19.2px;
+    }
+  }
+}
+
+.s-projects {
+  padding-top: 8.5rem;
+  margin-bottom: 3.2rem;
+
+  .container {
+    position: relative;
+  }
+
+  .dt-projects {
+    position: absolute;
+    top: -8rem;
+    right: -2rem;
+    opacity: 0.15;
+  }
+
+  .projects {
+    .items-container {
+      display: flex;
+      gap: 6rem;
+      flex-wrap: wrap;
+      padding-left: 5.5rem;
+    }
+  }
+
+  @include sectionBefore;
+
+  @include responsive(600px) {
+    .projects {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    .dt-projects {
+      top: -16rem;
+      font-size: 15rem;
+      right: -1rem;
+    }
+  }
+  @include responsive(430px) {
+    margin-bottom: 0;
+    padding-top: 2.5rem;
+    .projects {
+      .items-container {
+        padding-left: 0;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+      h2 {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .dt-projects {
+      font-size: 10.7rem;
+      top: -13rem;
+      right: 0.3rem;
+    }
+  }
+  @include responsive(375px) {
+    .dt-projects {
+      top: -12rem;
+      font-size: 11.4rem;
+      right: -1rem;
+    }
+  }
+}
+
+.s-certificates {
+  @include sectionBefore;
+  position: relative;
+  padding-top: 8.5rem;
+  margin-bottom: 3.2rem;
+
+  .container {
+    position: relative;
+  }
+
+  .dt-certificates {
+    position: absolute;
+    top: -6rem;
+    right: -2rem;
+    font-size: 12rem;
+    opacity: 0.15;
+  }
+
+  ul {
+    @include flex(row, space-between, center);
+    gap: 4.3rem;
+    padding: 6.3rem 2rem;
+    li {
+      button {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  @include sectionAfter;
+
+  @include responsive(700px) {
+    .schools {
+      ul {
+        flex-direction: column;
+        li {
+          button {
+            img {
+              width: 24rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(675px) {
+    padding-top: 0;
+    margin-bottom: 0;
+    .dt-certificates {
+      top: -11rem;
+      right: -0.6rem;
+      font-size: 10rem;
+    }
+  }
+  @include responsive(480px) {
+    .schools {
+      h2 {
+        font-size: 4rem;
+        span:nth-child(1) {
+          display: block;
+        }
+      }
+    }
+  }
+  @include responsive(430px) {
+    padding-top: 0;
+    margin-bottom: 0;
+    .dt-certificates {
+      font-size: 8rem;
+    }
+  }
+}
+
+footer {
+  padding-top: 5.8rem;
+  width: 100%;
+  position: relative;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 2rem;
+    color: $brand-color-light;
+    font-family: "Sora";
+    font-style: normal;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light;
+    margin-bottom: 5rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  .city {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: rgba($grey-400, 0.5);
+    z-index: 10;
+  }
+
+  .email {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-purple;
+    z-index: 10;
+  }
+
+  .phone {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    z-index: 10;
+  }
+
+  .socials {
+    @include flex(row, space-between, center);
+    gap: 3.5rem;
+    z-index: 10;
+  }
+
+  .copy {
+    padding: 9rem;
+    z-index: 10;
+    a {
+      color: $brand-color-purple;
+      font-weight: 700;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/footer-after.svg") no-repeat;
+    display: block;
+    width: 100%;
+    height: 41.8rem;
+    position: absolute;
+    right: -96rem;
+    bottom: 0;
+    animation: baladTwo 0.2s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: matrix(-0.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    bottom: 17rem;
+    left: -13rem;
+    animation: baladTwo 5s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  @include responsive(580px) {
+    padding-top: 0;
+    text-align: center;
+
+    h2,
+    h2::after,
+    h2::before {
+      font-size: 2.3rem;
+    }
+
+    .email {
+      font-size: 3.8rem;
+    }
+
+    .copy {
+      text-align: center;
+      a {
+        display: block;
+      }
+    }
+  }
+
+  @include responsive(500px) {
+    .email {
+      font-size: 3rem;
+    }
+  }
+}

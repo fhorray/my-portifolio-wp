@@ -1,0 +1,43 @@
+// Flex
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Section before
+@mixin sectionBefore {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: rotate(-4.29deg);
+    margin-bottom: 12rem;
+    animation: baladTwo 3s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+}
+// Section After
+@mixin sectionAfter {
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0.05rem;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: rotate(-4.29deg);
+    margin-bottom: 12rem;
+    animation: baladTwo 0.4s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+}
+
+// Responsive
+@mixin responsive($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  @include responsive(430px) {
+    font-size: 55%;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: $brand-color-bg;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: $brand-color-light;
+}
+
+a {
+  color: $brand-color-light;
+}
+
+// Scrollbar styles
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #22202c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $brand-color-purple;
+  border-radius: 50rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #22202c;
+}

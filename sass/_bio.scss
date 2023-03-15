@@ -1,0 +1,295 @@
+.header-bio {
+  .container-minor {
+    @include flex(row, center, center);
+    padding: 3.6rem 0;
+  }
+
+  &::before,
+  &::after {
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -3.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    right: 42px;
+    z-index: 3000;
+    animation: baladTwo 0.2s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+
+  &::after {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: #9245f5;
+    display: block;
+    transform: matrix(-3.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 27rem;
+    z-index: 3000;
+    animation: baladTwo 3s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+}
+
+.hero-bio {
+  .container-minor {
+    padding-top: 7.9rem;
+    @include flex(column, center, center);
+  }
+  .profile-image {
+    width: 100%;
+    max-width: 16.4rem;
+    height: 16.4rem;
+    border-radius: 200rem;
+    border: 1px solid rgba($brand-color-purple, 0.5);
+    position: relative;
+    margin: 4rem;
+    img {
+      width: 200rem;
+      max-width: 14.4rem;
+      border-radius: inherit;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  h1 {
+    color: $brand-color-purple;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .number {
+    font-family: "Sora";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+  }
+  .socials {
+    @include flex(row, center, center);
+    gap: 2rem;
+  }
+
+  // DETAILS
+  .dt1 {
+    top: 6.8rem;
+    opacity: 0.05;
+  }
+  .dt2 {
+    top: 30.8rem;
+    z-index: 3;
+    opacity: 0.1;
+  }
+  .dt3 {
+    bottom: 10rem;
+    opacity: 0.03;
+  }
+}
+
+.links-bio {
+  padding: 7rem 0;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  .links-list {
+    @include flex(column, center, center);
+    gap: 3rem;
+    text-align: center;
+    li {
+      a {
+        display: inline-block;
+        padding: 1.3rem 9.5rem;
+        background: linear-gradient(137.28deg, #9245f5 -3.33%, #650bd9 95.04%);
+        border-radius: 0.5rem;
+        transition: all 0.1s ease-in;
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
+
+.arrow-down {
+  @include flex(column, center, center);
+  gap: 1rem;
+
+  img:nth-child(1) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+  }
+  img:nth-child(2) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+  }
+  img:nth-child(3) {
+    animation: downOpacity 2s infinite ease-in-out;
+    animation-delay: 0.9s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.footer-bio {
+  padding-top: 5.8rem;
+  width: 100%;
+  position: relative;
+
+  .container-minor {
+    @include flex(column, center, center);
+    gap: 2rem;
+    color: $brand-color-light;
+    font-family: "Sora";
+    font-style: normal;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-light;
+    margin-bottom: 1rem;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0.5rem;
+      color: $brand-color-purple;
+      opacity: 1;
+      font-family: "Sora";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: "/>";
+    }
+  }
+
+  .city {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: rgba($grey-400, 0.5);
+    z-index: 10;
+  }
+
+  .email {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $brand-color-purple;
+    z-index: 10;
+    margin-bottom: 4rem;
+  }
+
+  .phone {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    margin-bottom: 4rem;
+  }
+
+  .socials {
+    @include flex(row, space-between, center);
+    gap: 3.5rem;
+    z-index: 10;
+  }
+
+  .copy {
+    text-align: center;
+    padding: 9rem 0;
+    z-index: 10;
+    a {
+      color: $brand-color-purple;
+      font-weight: 700;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/footer-after.svg") no-repeat;
+    display: block;
+    width: 100%;
+    height: 41.8rem;
+    position: absolute;
+    right: -96rem;
+    bottom: 0;
+    animation: baladTwo 0.2s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+  &::before {
+    content: "";
+    background-color: $brand-color-purple;
+    width: 83.5rem;
+    height: 0.05rem;
+    opacity: 0.3;
+    background-color: $brand-color-purple;
+    display: block;
+    transform: matrix(-0.93, -0.4, 0.37, -0.92, 0, 0);
+    position: absolute;
+    bottom: 17rem;
+    left: -13rem;
+    animation: baladTwo 5s infinite ease-in-out;
+    animation-direction: alternate, reverse, normal;
+  }
+}

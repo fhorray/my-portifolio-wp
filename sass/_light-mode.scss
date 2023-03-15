@@ -1,0 +1,178 @@
+body {
+  transition: all 0.3s ease-in;
+
+  &.light-mode {
+    background-color: $brand-color-bg-light;
+    transition: all 0.3s ease-in;
+
+    header {
+      background: rgba($brand-color-bg-light, 0.85);
+      transition: all 0.3s ease-in;
+
+      .lang-dropdown {
+        background-color: $brand-color-black-light;
+
+        button {
+          color: $brand-color-bg-light;
+        }
+
+        .active-lang {
+          color: $brand-color-purple-light;
+        }
+        &::before {
+          background-color: $brand-color-black-light;
+        }
+      }
+
+      nav {
+        ul {
+          li {
+            a {
+              color: $brand-color-black-light;
+            }
+          }
+        }
+
+        .header-btns {
+          .cv-download {
+            a {
+              color: $brand-color-black-light;
+            }
+            img {
+              filter: brightness(25%);
+            }
+
+            &:hover a {
+              color: $brand-color-bg-light;
+            }
+            &:hover img {
+              filter: brightness(100%);
+            }
+          }
+        }
+      }
+
+      #logo {
+        filter: grayscale(94%) brightness(104%) hue-rotate(167deg)
+          saturate(1000%) contrast(159%) invert(100%);
+      }
+    }
+
+    .s-hero {
+      .text {
+        color: $brand-color-black-light;
+        h2 {
+          color: $brand-color-black-light;
+          .interm {
+            color: $brand-color-black-light;
+          }
+        }
+      }
+
+      ul {
+        li {
+          a {
+            filter: brightness(25%);
+          }
+        }
+      }
+
+      .dt1,
+      .dt2,
+      .dt3 {
+        -webkit-text-stroke-color: $brand-color-black-light;
+        opacity: 0.3;
+      }
+    }
+
+    .s-skills {
+      h2 {
+        color: $brand-color-black-light;
+      }
+      ul {
+        li {
+          filter: brightness(25%);
+        }
+      }
+
+      .arrow-down {
+        filter: brightness(25%);
+      }
+    }
+
+    .s-about {
+      h2 {
+        color: $brand-color-black-light;
+      }
+
+      p {
+        color: $brand-color-black-light;
+        span {
+          color: $brand-color-black-light;
+        }
+        a {
+          color: $brand-color-purple-light;
+          font-size: 2rem;
+        }
+      }
+
+      .dt-sobre {
+        -webkit-text-stroke-color: $brand-color-black-light;
+        opacity: 0.4;
+      }
+    }
+
+    .s-projects {
+      h2 {
+        color: $brand-color-black-light;
+      }
+
+      .item {
+        border: 1px solid rgba($brand-color-purple-light, 0.4);
+      }
+
+      .dt-projects {
+        -webkit-text-stroke-color: $brand-color-black-light;
+        opacity: 0.4;
+      }
+    }
+
+    .s-certificates {
+      h2 {
+        color: $brand-color-black-light;
+      }
+
+      ul {
+        li {
+          filter: grayscale(94%) brightness(89%) hue-rotate(167deg)
+            saturate(1589%) contrast(159%) invert(100%);
+        }
+      }
+
+      .dt-certificates {
+        -webkit-text-stroke-color: $brand-color-black-light;
+        opacity: 0.4;
+      }
+    }
+
+    footer {
+      h2 {
+        color: $brand-color-black-light;
+      }
+
+      ul {
+        li {
+          filter: brightness(25%);
+        }
+      }
+
+      .phone {
+        color: $brand-color-black-light;
+      }
+
+      .copy {
+        color: $brand-color-black-light;
+      }
+    }
+  }
+}
